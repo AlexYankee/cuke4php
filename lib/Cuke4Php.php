@@ -222,7 +222,7 @@ class Cuke4Php {
                 $aArgs = array();
                 array_shift($aMatches);
                 foreach ($aMatches as $aMatch) {
-                    $aArgs[] = array('val' => $aMatch[0][0], 'pos' => $aMatch[0][1]);
+		    $aArgs[] = array('val' => $aMatch[0][0], 'pos' => strlen(utf8_decode(substr($sStep,0,$aMatch[0][1]))));
                 }
                 $aSteps[] = array('id' => $i, 'args' => $aArgs, 'source' => $aStep['filename'] . ":" . $aStep['startline']);
             };
