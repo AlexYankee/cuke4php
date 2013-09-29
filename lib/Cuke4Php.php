@@ -271,7 +271,7 @@ class Cuke4Php {
 /**
 * {$aSnippet->step_keyword} /^$sStepName$/
 **/
-public function $sMethodName($sParams) {
+public function <stepMethodName>($sParams) {
     self::markPending();
 }
 EOT;
